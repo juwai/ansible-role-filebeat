@@ -1,0 +1,15 @@
+[program:filebeat]
+command=filebeat -e -c {{ filebeat_config_dir }}/filebeat.yml
+directory={{ filebeat_log_dir }}
+user={{ filebeat_user }}
+group={{ filebeat_group }}
+autostart=true
+autorestart=true
+redirect_stdout=true
+redirect_stderr=true
+stdout_logfile={{ filebeat_log_dir }}/stdout.log
+stdout_logfile_maxbytes=20MB
+stdout_logfile_backups=10
+stderr_logfile={{ filebeat_log_dir }}/stderr.log
+stderr_logfile_maxbytes=20MB
+stderr_logfile_backups=10
