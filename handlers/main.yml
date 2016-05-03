@@ -1,8 +1,12 @@
 ---
 # handlers file for filebeat
+- name: supervisord update filebeat
+  command: supervisorctl update
+  notify: supervisord restart filebeat
+  when: filebeat_supervisor_enabled
+
 - name: supervisord restart filebeat
   supervisorctl:
     name: 'filebeat'
     state: restarted
   when: filebeat_supervisor_enabled
-  ignore_errors: true
