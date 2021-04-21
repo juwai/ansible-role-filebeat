@@ -4,8 +4,9 @@
 supervisord_config_dir: /etc/supervisor.d
 filebeat_supervisor_enabled: true
 
-filebeat_version: 1.0.1
-filebeat_rpm_url: https://download.elastic.co/beats/filebeat/filebeat-{{filebeat_version}}-x86_64.rpm
+filebeat_version: 7.12.0
+filebeat_rpm_url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-{{ filebeat_version }}-x86_64.rpm
+filebeat_registry_dir: /var/lib/filebeat
 filebeat_config_dir: /etc/filebeat
 filebeat_log_dir: /var/log/filebeat
 filebeat_group: filebeat

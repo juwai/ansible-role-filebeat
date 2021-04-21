@@ -29,13 +29,19 @@ Default is true.
 
 Filebeat version.
 
-Default is `1.0.1`.
+Default is `7.12.0`.
 
 ### filebeat_rpm_url
 
 URL where to download filebeat.
 
-Default is `https://download.elastic.co/beats/filebeat/filebeat-1.0.1-x86_64.rpm`.
+Default is `https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.12.0-x86_64.rpm`.
+
+### filebeat_registry_dir
+
+Directory for registry data.
+
+Default is `/var/lib/filebeat`.
 
 ### filebeat_config_dir
 
